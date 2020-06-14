@@ -12,3 +12,13 @@
     6-й день: 3,22
 
 Ответ: на 6-й день спортсмен достиг результата — не менее 3 км."""
+user_answer1 = input('Введите результат первого дня в км :')
+user_answer2 = input('Введите общий результат цели в км :')
+result_first = float(user_answer1)
+result_aim = float(user_answer2)
+result_current = result_first
+i=1
+while result_current < result_aim:
+    result_current *= 1.1
+    i+=1
+print(f'Целевой результат не менее {result_aim} км спортсмен достиг на {i}-й день')
