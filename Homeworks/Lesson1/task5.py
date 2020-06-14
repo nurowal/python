@@ -3,3 +3,21 @@
     или убыток — издержки больше выручки). Выведите соответствующее сообщение.
     Если фирма отработала с прибылью, вычислите рентабельность выручки (соотношение прибыли к выручке).
     Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника."""
+input_answer1 = input('Ввведите значение выручки фирмы :')
+input_answer2 = input('Ввведите значение издержек фирмы :')
+revenue = int(input_answer1)
+costs = int(input_answer2)
+flag = 0
+if revenue > costs:
+    print('Фирма работает с прибылью')
+    profitability = (revenue - costs) / costs
+    print(f'Рентабельность составляет {round(profitability * 100, 2)} %')
+    flag = 1
+elif revenue == costs:
+    print('Фирма работает в ноль')
+else:
+    print('Фирма работает в убыток')
+if flag == 1:
+    input_answer3 = input('Ввведите численность сотрудников фирмы :')
+    number_employeers = int(input_answer3)
+    print(f'Прибыль в расчете на одного сотрудника {round((revenue-costs)/ number_employeers,2)} руб.')

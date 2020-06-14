@@ -16,4 +16,4 @@ for i in range (1,s+1):
   if max == 9:
      max=9
      break
-print(max)
+print('Наибольшая цифра в числе :', max)
